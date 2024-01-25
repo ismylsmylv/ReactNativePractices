@@ -16,6 +16,7 @@ import {
 import Navbar from './components/Navbar';
 import Message from './components/Message';
 import Greet from './components/Greet';
+import StyledCard from './components/StyledCard';
 const ProfImg = require('./assets/img/profile.jpeg');
 
 function App(): React.JSX.Element {
@@ -25,7 +26,7 @@ function App(): React.JSX.Element {
   return (
     <View>
       <Navbar />
-      <ActivityIndicator size="large" />
+      {/* <ActivityIndicator size="large" /> */}
       <ActivityIndicator size="small" color={'red'} animating={isDisabled} />
       <StatusBar backgroundColor="#008069" />
       <Text>Modal</Text>
@@ -80,7 +81,9 @@ function App(): React.JSX.Element {
             }}></Button>
         </View>
       </Modal>
+      <StyledCard />
     </View>
   );
 }
+
 export default App;
