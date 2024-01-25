@@ -12,11 +12,13 @@ import {
   StatusBar,
   ActivityIndicator,
   Alert,
+  StyleSheet,
 } from 'react-native';
 import Navbar from './components/Navbar';
 import Message from './components/Message';
 import Greet from './components/Greet';
 import StyledCard from './components/StyledCard';
+import Box from './components/Box';
 const ProfImg = require('./assets/img/profile.jpeg');
 
 function App(): React.JSX.Element {
@@ -81,9 +83,30 @@ function App(): React.JSX.Element {
             }}></Button>
         </View>
       </Modal>
-      <StyledCard />
+      {/* <StyledCard /> */}
+      <View style={styles.container}>
+        <Box styles={styles} children={['text1', 'dfdsdf', 'sdfs']} />
+      </View>
     </View>
   );
 }
 
 export default App;
+
+const styles = StyleSheet.create({
+  box: {
+    backgroundColor: 'green',
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  container: {
+    width: '100%',
+    flexDirection: 'column-reverse',
+  },
+  text: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    color: 'white',
+  },
+});
